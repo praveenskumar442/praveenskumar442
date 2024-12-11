@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src='https://cdn.paritydeals.com/staging-banner.js'></script>
+    <script type="text/javascript">
+function resolvePdSDKFunction(e,...t){return new Promise((n,i)=>{!function r(){window.ParityDealsSDK&&"function"==typeof window.ParityDealsSDK[e]?window.ParityDealsSDK[e](...t).then(n).catch(i):setTimeout(r,100)}()})}!function(e,t,n,i,r,a,c){e[i]=e[i]function(){(e[i].q=e[i].q[]).push(Array.prototype.slice.call(arguments))},a=t.createElement(n),c=t.getElementsByTagName(n)[0],a.id="parity-deals-sdk",a.async=1,a.src=r,c.parentNode.insertBefore(a,c)}(window,document,"script","ParityDealsSDK","https://cdn.paritydeals.com/paritydeals-sdk/0.0.3/paritydeals-sdk.min.js"),window.ParityDeals=%7Binit:function(e)%7BParityDealsSDK("init",e)%7D,getUpdatedPrice:function(e,t)%7Breturn resolvePdSDKFunction("getUpdatedPrice",e,t)},updatePriceElement:function(e,t){return resolvePdSDKFunction("updatePriceElement",e,t)},updatePrice:function(e){return resolvePdSDKFunction("updatePrice",e)}};
+
+// Initialize ParityDeals SDK
+ParityDeals.init({
+  convertToLocal: true, // Convert prices to local currency
+  // Pass options as needed
+});
+</script>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
+</head>
+<body style="height: 1000px;">
+<h1>This is for test purposes only </h1>
+<p>I'm hosted with GitHub Pages.</p>
+    <div id="gallery">
+    
+    <a data-lg-size="2500-2303" data-src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@asoshiation' >Shah </a></h4><p> Location - <a href='https://unsplash.com/s/photos/shinimamiya%2C-osaka%2C-japan'>Shinimamiya, Osaka, Japan</a></p>">
+      <img class="img-fluid" src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+    </a>
+    <a data-lg-size="2500-2504"  data-src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>">
+      <img class="img-fluid" src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+    </a>
+  </div>
+    <div class="pricing-plan">
+  <div class="price-container" data-pd-original-price="60">
+    <span data-pd-price-formatted></span>
+  </div>
+</div>
+  <a href="https://0048-2401-4900-1c07-7fb2-4177-e435-7625-5871.ngrok-free.app/api/v1/lemon-squeezy-buy-now/?store_id=130663&variants=586298&pd_suite_id=5&success_url=https://praveenskumar.github.io/">Visit W3Schools.com!</a>
+
+</body>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+<script>
+    let gallery = document.getElementById('gallery')
+    lightGallery(gallery,{
+      controls: false
+    })
+  </script>
+    <script id="__webwhizSdk__" src="https://widget.webwhiz.ai/webwhiz-sdk.js" data-chatbot-id="65be0e67215790325626872d"></script>
+  <script>
+const fetchCheckoutUrl = async () => {
+  const data = {
+    pd_identifier: '5d635029-3cc3-4c43-ae1e-aa58c8265974',  // Replace with actual pd identifier
+    ip_address: '192.168.1.38',     // Replace with actual ip_address
+    apply_coupons: true, // Set it to false if you don't want automatically apply the coupons
+    payment_id: 'plink_1QUNL1LN3QPLtCqeapRJpLdB',
+    checkout_data: {},   // Replace with the actual checkout data
+    success_url: 'https://paritydeals.com/' // Set the URL for post-checkout redirection.
+  };
+
+  try {
+    const response = await fetch('https://stagingapi.paritydeals.com/api/v1/stripe-checkout/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    console.log('Success:', result);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+// Call the function
+fetchCheckoutUrl();
+  </script>
+
+</html>
